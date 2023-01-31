@@ -1,0 +1,16 @@
+string appendAndDelete(string s, string t, int k) {
+    string ns,nt;
+    int c=0;
+    if(s.size()<t.size()){
+        return "No";
+    }
+    for(int i=0;i<t.size();i++){
+        if(s[i]!=t[i])
+            break;
+        else
+            c++;
+    }
+    if(s.size()-c + t.size()-c <= k)
+        return "Yes";
+    return "No";    
+}
