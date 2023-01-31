@@ -1,0 +1,12 @@
+int noOfApples =0 , noOfOranges =0;
+    for (int i : apples){
+        if (s<=(a+i)&&(a+i)<=t){
+            noOfApples ++;
+        }
+    }
+    for (int i : oranges){
+        if (s<=(b+i) && (b+i)<=t){
+            noOfOranges++;
+        }
+    }
+    cout << noOfApples << endl << noOfOranges;
