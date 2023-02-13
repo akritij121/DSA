@@ -1,9 +1,15 @@
-void inOrder(Node *root) {
-        if (root->left){
-            inOrder(root->left);
-        }
-        std::cout << root->data<<" ";
-        if (root->right){
-            inOrder(root->right);
-        }
+class Solution {
+public:
+vector<int> v;
+void postorder(TreeNode* root){
+    if(root==nullptr){return;}
+        postorder(root->left);
+        postorder(root->right);
+        v.push_back(root->val);
     }
+
+    vector<int> postorderTraversal(TreeNode* root) {
+        postorder(root);
+        return v;
+    }
+};
